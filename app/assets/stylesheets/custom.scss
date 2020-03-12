@@ -1,0 +1,18 @@
+.login-info {
+    background-color: lightgray;
+    height: 20px;
+    text-align: right;
+    p {
+        font-size: 18px;
+        color: grey;
+    }
+}
+
+table {
+    table-layout: fixed;
+    width: 75%;
+    text-align: center;
+    td {
+        flex-wrap: wrap;
+    }
+}
