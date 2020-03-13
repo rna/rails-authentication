@@ -16,3 +16,17 @@ table {
         flex-wrap: wrap;
     }
 }
+
+.form-errors {
+    color: red;
+}
+
+.alert-success {
+    background-color: green;
+    color: white;
+}
+
+.alert-danger {
+    color: red;
+    font-size: 16px;
+}

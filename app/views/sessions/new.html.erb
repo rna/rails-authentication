@@ -9,6 +9,7 @@
   <%= f.password_field :password %>
   <br>
   <br>
-  <%= f.submit "Login" %>
+  <%= f.submit "Login" %> 
+  <%= link_to '<button type="button">Register</button>'.html_safe, signup_path, method: "get" %> 
   
 <% end %>
