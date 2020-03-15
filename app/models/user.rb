@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :posts
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
@@ -27,7 +27,6 @@ class User < ActiveRecord::Base
  
   def remember
     create_remember_token
-    # save
   end
 
   def authenticated?(token)
@@ -41,7 +40,8 @@ class User < ActiveRecord::Base
     update_column(:remember_token, nil)
   end
 
-  def create_remember_token
-    self.update_column(:remember_token, User.digest(User.new_token))
-  end
+  private
+    def create_remember_token
+      self.update_column(:remember_token, User.digest(User.new_token))
+    end
 end
