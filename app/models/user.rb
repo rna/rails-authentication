@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :posts
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
-  before_create :create_remember_token
   
   validates :name, presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -26,7 +25,7 @@ class User < ApplicationRecord
   end
  
   def remember
-    create_remember_token
+    self.update_column(:remember_token, User.digest(User.new_token))
   end
 
   def authenticated?(token)
@@ -39,9 +38,5 @@ class User < ApplicationRecord
   def forget
     update_column(:remember_token, nil)
   end
-
-  private
-    def create_remember_token
-      self.update_column(:remember_token, User.digest(User.new_token))
-    end
+  
 end

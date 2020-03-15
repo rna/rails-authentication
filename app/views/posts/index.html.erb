@@ -1,6 +1,6 @@
 <div class="login-info">
   <% if logged_in? %>
-  <p><%= link_to "Log Out", logout_path, method: "delete" %></p>
+  <p class="user_name"><%= "Welcome #{@current_user.name} , " %><%= link_to "Log Out", logout_path, method: "delete" %></p>
   <% else %>
   <p><%= link_to "Log In", login_path %></p>
   <% end %>
@@ -37,4 +37,9 @@
 
 <br>
 
+<% unless logged_in? %>
+<h3>NOTE: Authors shown only for Members </h3>
+<% end %>
+
 <%= link_to 'New Post', new_post_path %>
+

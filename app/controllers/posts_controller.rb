@@ -29,11 +29,11 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        flash[:success] = "Post was successfully created"
+        redirect_to root_path
       else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        flash[:danger] = "All fields are required"
+        render :new
       end
     end
   end
@@ -64,6 +64,7 @@ class PostsController < ApplicationController
 
   def signed_in_user
     unless logged_in?
+      flash[:danger] = "You need to login to create the Post"
       redirect_to login_url
     end
   end
