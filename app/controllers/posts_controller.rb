@@ -27,7 +27,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
 
-    respond_to do |format|
       if @post.save
         flash[:success] = "Post was successfully created"
         redirect_to root_path
@@ -35,7 +34,6 @@ class PostsController < ApplicationController
         flash[:danger] = "All fields are required"
         render :new
       end
-    end
   end
 
   # PATCH/PUT /posts/1
