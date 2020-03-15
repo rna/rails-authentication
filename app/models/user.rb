@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   has_many :posts
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
@@ -13,29 +13,35 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   
-  def self.new_token
+  def User.new_token
     SecureRandom.urlsafe_base64
   end
   
-  def self.digest(token)
-    Digest::SHA1.hexdigest(token.to_s)
+  def User.digest(token)
+    
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+    
+    BCrypt::Password.create(token, cost: cost)
+
   end
  
   def remember
     create_remember_token
-    save
+    # save
   end
 
   def authenticated?(token)
-    token == remember_token
+    return false unless remember_token
+
+    BCrypt::Password.new(remember_token).is_password?(token)
+
   end
 
   def forget
-    update_attribute(:remember_token, nil)
+    update_column(:remember_token, nil)
   end
 
-  private
-    def create_remember_token
-      self.remember_token = User.digest(User.new_token)
-    end
+  def create_remember_token
+    self.update_column(:remember_token, User.digest(User.new_token))
+  end
 end
