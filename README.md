@@ -1,3 +1,4 @@
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -13,46 +14,42 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<!-- PROJECT LOGO -->
-<br />
+
 <p align="center">
   <h2 class ="norse" align="center" style="@font-face {font-family: 'Norse'; src: url('/fonts/Norse.otf'); font-family:'Norse'}">Members Only</h2>
-
-  <br />
 </p>
 
-<!-- TABLE OF CONTENTS -->
+Building Members Only Forum Page where members can post the gossip.
 
 ## Table of Contents
 
 - [About the Project](#about-the-project)
-  - [Built With](#built-with)
+- [Built With](#built-with)
+- [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-- [Usage](#usage)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
-<!-- ABOUT THE PROJECT -->
+  * [Usage](#usage)
+- [Authors](#authors)
+<!-- - [Acknowledgements](#acknowledgements) -->
 
 ## About The Project
+This project is intend to create an application for online forum where members only can write embarrassing posts about non-members. Inside the forum, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
-
-[Microverse](https://www.microverse.org/) Sixth Ruby on Rails Section Main Curriculum Project "Members only"
-
-Project: Building Members Only Page. [Assignment link](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication#project-2-members-only)
-
-
-### Built With
+## Built With
 
 - [Ruby](https://www.ruby-lang.org)
 - [Ruby on Rails](https://rubyonrails.org/)
 
+## Live Demo
+
+[Live Demo Link]()
+
 ## Getting Started
 
-### Prerequisites
+To get a local copy up and running follow these simple example steps.
 
+### Prerequisites
 
 * Windows
 ```sh
@@ -64,29 +61,51 @@ https://gorails.com/setup/windows/10
 sudo apt-get install ruby-full
 gem install rails -v 5.1.7
 ```
-### Installation
+<!-- ### Setup -->
 
-1. Clone the repo
+### Installation
+Clone the repo
 
 ```sh
 git clone https://github.com/rna/rails-authentication
 ```
-<!-- USAGE EXAMPLES -->
-## Usage
 
-In order to run the app, Download repository to your local machine, then run `rails server`.
-        
+### Usage
+In order to run the app, Download repository to your local machine, then run the command following command in the teminal
+`rails server`.
 
-<!-- CONTACT -->
+<!-- ### Run tests -->
 
-## Contact
+<!-- ### Deployment -->
 
 
-[Ramesh Naidu Allu](https://twitter.com/rnadev)
+### Author
 
-Project Link: [https://github.com/rna/rails-authentication](https://github.com/rna/rails-authentication)
+👤 **Ramesh Naidu Allu**
 
-<!-- ACKNOWLEDGEMENTS -->
+- Github: [@rna](https://github.com/rna)
+- Twitter: [@rnadev](https://twitter.com/rnadev)
+- Linkedin: [Linkedin](https://linkedin.com/in/rnadev)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+<!-- ## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc -->
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -100,6 +119,5 @@ Project Link: [https://github.com/rna/rails-authentication](https://github.com/r
 [stars-url]: https://github.com/rna/rails-authentication/stargazers
 [issues-shield]: https://img.shields.io/github/issues/rna/rails-authentication.svg?style=flat-square
 [issues-url]: https://github.com/rna/rails-authentication/issues
-[license-shield]: https://img.shields.io/github/license/rna/rails-authentication.svg?style=flat-square
-[license-url]: https://github.com/rna/rails-authentication/blob/master/LICENSE.txt
-[product-screenshot]: imgs/screenshot.jpg
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://opensource.org/licenses/MIT
