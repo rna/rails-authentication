@@ -1,0 +1,13 @@
+<h1>New Post</h1>
+
+<%= form_for @post do |f|%>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+
+    <%= f.submit "Submit" %>
+<%end%>
+
+<%= link_to 'Back', posts_path %>

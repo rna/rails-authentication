@@ -1,0 +1,45 @@
+<div class="login-info">
+  <% if logged_in? %>
+  <p class="user_name"><%= "Welcome #{@current_user.name} , " %><%= link_to "Log Out", logout_path, method: "delete" %></p>
+  <% else %>
+  <p><%= link_to "Log In", login_path %></p>
+  <% end %>
+</div>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <% if logged_in? %>
+          <th>Posted by</th>
+        <%end%>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <% if logged_in? %>
+          <td><%= post.user.name %></td>
+        <%end%>
+
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<% unless logged_in? %>
+<h3>NOTE: Authors shown only for Members </h3>
+<% end %>
+
+<%= link_to 'New Post', new_post_path %>
+
