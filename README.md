@@ -19,7 +19,7 @@
   <h2 class ="norse" align="center" style="@font-face {font-family: 'Norse'; src: url('/fonts/Norse.otf'); font-family:'Norse'}">Members Only</h2>
 </p>
 
-Building Members Only Forum Page where members can post the gossip.
+Building Members Only forum where members can post gossip.
 
 ## Table of Contents
 
@@ -31,10 +31,11 @@ Building Members Only Forum Page where members can post the gossip.
   * [Installation](#installation)
   * [Usage](#usage)
 - [Authors](#authors)
+
 <!-- - [Acknowledgements](#acknowledgements) -->
 
 ## About The Project
-This project is intend to create an application for online forum where members only can write embarrassing posts about non-members. Inside the forum, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
+This project is intend to create an application for an online forum where members can write embarrassing posts about non-members. Inside the forum, members can see who the author of a post is, but outside, they can only see the story and wonder who wrote it.
 
 ### Screenshot
 ![Posts Page screenshot](https://i.imgur.com/VfRP5ru.jpg)
@@ -74,8 +75,7 @@ git clone https://github.com/rna/rails-authentication
 ```
 
 ### Usage
-In order to run the app, Download repository to your local machine, then run the command following command in the teminal
-`rails server`.
+In order to run the app, download the repository to your local machine, then run the command following command in the terminal `rails server`.
 
 <!-- ### Run tests -->
 
