@@ -36,6 +36,9 @@ Building Members Only Forum Page where members can post the gossip.
 ## About The Project
 This project is intend to create an application for online forum where members only can write embarrassing posts about non-members. Inside the forum, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
+### Screenshot
+![Posts Page screenshot](https://i.imgur.com/VfRP5ru.jpg)
+
 ## Built With
 
 - [Ruby](https://www.ruby-lang.org)
