@@ -30,6 +30,7 @@ Building Members Only forum where members can post gossip.
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Run Tests](#run-tests)
 - [Authors](#authors)
 
 <!-- - [Acknowledgements](#acknowledgements) -->
@@ -55,12 +56,15 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* Windows
+- Windows
+
 ```sh
 https://www.ruby-lang.org/es/documentation/installation/#rubyinstaller
 https://gorails.com/setup/windows/10
 ```
-* Ubuntu 18.04
+
+- Ubuntu 18.04
+
 ```sh
 sudo apt-get install ruby-full
 gem install rails -v 5.1.7
@@ -68,17 +72,41 @@ gem install rails -v 5.1.7
 <!-- ### Setup -->
 
 ### Installation
-Clone the repo
+
+Clone the repo with:
 
 ```sh
 git clone https://github.com/rna/rails-authentication
 ```
 
+Instal gems with:
+
+```sh
+bundle install
+```
+
+Setup database with:
+
+```sh
+   rails db:create
+   rails db:migrate
+```
+
 ### Usage
-In order to run the app, download the repository to your local machine, then run the command following command in the terminal `rails server`.
 
-<!-- ### Run tests -->
+Start server with:
 
+```sh
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+### Run tests
+
+```sh
+    rpsec --format documentation
+```
 <!-- ### Deployment -->
 
 
