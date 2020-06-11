@@ -31,6 +31,7 @@ Building Members Only forum where members can post gossip.
   * [Installation](#installation)
   * [Usage](#usage)
   * [Run Tests](#run-tests)
+- [Roadmap](#roadmap)
 - [Authors](#authors)
 
 <!-- - [Acknowledgements](#acknowledgements) -->
@@ -107,8 +108,14 @@ Open `http://localhost:3000/` in your browser.
 ```sh
     rpsec --format documentation
 ```
-<!-- ### Deployment -->
 
+## Roadmap
+- [ ] Improve User Interface(UI) and User experience (UX) 
+- [ ] Option to comment on the gossip
+- [ ] Provide Upvote and downvote option
+- [ ] Email confirmations for registration
+
+<!-- ### Deployment -->
 
 ### Author
 
