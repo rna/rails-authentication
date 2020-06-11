@@ -48,7 +48,7 @@ This project is intend to create an application for an online forum where member
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://members-only-site.herokuapp.com/)
 
 ## Getting Started
 
