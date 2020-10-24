@@ -1,0 +1,35 @@
+.login-info {
+    background-color: lightgray;
+    height: 20px;
+    text-align: right;
+    p {
+        font-size: 18px;
+        color: grey;
+    }
+    .user_name {
+        color: black;
+    }
+}
+
+table {
+    table-layout: fixed;
+    width: 75%;
+    text-align: center;
+    td {
+        flex-wrap: wrap;
+    }
+}
+
+.form-errors {
+    color: red;
+}
+
+.alert-success {
+    background-color: green;
+    color: white;
+}
+
+.alert-danger {
+    color: red;
+    font-size: 16px;
+}
